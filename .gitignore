@@ -1,0 +1,21 @@
+# Bỏ qua thư mục node_modules
+node_modules/
+
+# Bỏ qua các tệp log
+*.log
+
+# Bỏ qua các tệp tạm thời
+*.tmp
+
+# Bỏ qua thư mục build
+dist/
+build/
+
+# Bỏ qua các tệp cấu hình môi trường
+.env
+
+temp_firmware/
+
+OTA1_Omni/
+OTA0_FirmwareUpdate/
+Omni_Server/

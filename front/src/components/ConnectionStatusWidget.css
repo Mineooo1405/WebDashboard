@@ -1,0 +1,427 @@
+.connection-status-widget {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.connection-status-widget h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.connection-status-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.connection-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.connection-label {
+  font-weight: 500;
+  min-width: 80px;
+}
+
+.connection-status {
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.connection-status.connected {
+  background-color: #e6f7e6;
+  color: #2e7d32;
+}
+
+.connection-status.disconnected {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.last-seen {
+  font-size: 11px;
+  color: #666;
+  margin-left: 4px;
+}
+
+.connection-status-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.connection-status-header {
+  background: #f0f4f8;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.connection-status-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.connection-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toggle-controls-button {
+  background: transparent;
+  border: none;
+  color: #4a5568;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.toggle-controls-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #2d3748;
+}
+
+.connection-pulse {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.connection-pulse.connected {
+  background-color: #48bb78;
+}
+
+.connection-pulse.connected::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #48bb78;
+  opacity: 0.5;
+  animation: pulse 2s infinite;
+}
+
+.connection-pulse.disconnected {
+  background-color: #f56565;
+}
+
+.connection-status-body {
+  padding: 16px;
+}
+
+.connection-server-status {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.connection-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.server-icon {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.server-icon.connected {
+  color: #48bb78;
+}
+
+.server-icon.disconnected {
+  color: #f56565;
+}
+
+.robot-icon {
+  font-size: 20px;
+}
+
+.connection-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.connection-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a5568;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.connection-status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.connection-status-badge.connected {
+  background-color: rgba(72, 187, 120, 0.1);
+  color: #2f855a;
+  border: 1px solid rgba(72, 187, 120, 0.2);
+}
+
+.connection-status-badge.disconnected {
+  background-color: rgba(245, 101, 101, 0.1);
+  color: #c53030;
+  border: 1px solid rgba(245, 101, 101, 0.2);
+}
+
+.connection-actions {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.connection-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 110px;
+  gap: 6px;
+}
+
+.connection-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.connection-button.connect {
+  background-color: #4299e1;
+  color: white;
+}
+
+.connection-button.connect:hover:not(:disabled) {
+  background-color: #3182ce;
+}
+
+.connection-button.connect.connecting {
+  background-color: #3182ce;
+  position: relative;
+}
+
+.connection-button.connect.connecting .button-icon {
+  animation: rotate 1s linear infinite;
+  display: inline-block;
+}
+
+.connection-button.disconnect {
+  background-color: #f56565;
+  color: white;
+}
+
+.connection-button.disconnect:hover {
+  background-color: #e53e3e;
+}
+
+.connection-button.connect-robot {
+  background-color: #68d391;
+  color: #234e52;
+}
+
+.connection-button.connect-robot:hover:not(:disabled) {
+  background-color: #48bb78;
+}
+
+.connection-button.connect-robot.disabled {
+  background-color: #e2e8f0;
+  color: #718096;
+}
+
+.connection-divider {
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 12px 0;
+}
+
+.connection-robot-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.robot-connection-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: #f7fafc;
+  transition: all 0.2s ease;
+}
+
+.robot-connection-item:hover {
+  background-color: #edf2f7;
+}
+
+.connection-name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.robot-name {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 14px;
+}
+
+.last-seen-info {
+  display: flex;
+  font-size: 12px;
+  color: #718096;
+}
+
+.last-seen-label {
+  margin-right: 4px;
+}
+
+.last-seen-time {
+  font-weight: 500;
+}
+
+.button-icon {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-text {
+  white-space: nowrap;
+}
+
+.button-text.muted {
+  color: #718096;
+}
+
+.robot-connected-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: #f0fff4;
+  min-width: 110px;
+}
+
+.button-icon.success {
+  color: #48bb78;
+}
+
+.connection-footer {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.connection-help {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #718096;
+}
+
+.help-icon {
+  font-size: 14px;
+  color: #4299e1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  70% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .connection-name-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .connection-status-badge {
+    margin-top: 4px;
+  }
+
+  .connection-server-status,
+  .robot-connection-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .connection-icon {
+    margin-right: 0;
+  }
+  
+  .connection-actions {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .connection-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

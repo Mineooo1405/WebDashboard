@@ -1,0 +1,18 @@
+python 3.12.4 64bit
+pip install fastapi uvicorn pyodbc websocket
+pip install sqlalchemy psycopg2
+pip install alembic
+nhớ cài odbc driver 18
+username: sa / pass: 123456
+
+lệnh chạy fastapi uvicorn main:app --reload(lệnh này dùng để reload theo thời gian thực) --host <address> --port <port>
+
+để chạy front-end thì phải cd iot-dashboard rồi dùng npm start
+
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+pip install python-dotenv
+
+cd back
+python test_data_sender.py --type bno055 --file "../json_data/imu_data_20250328_101150.json" --robot robot1 --delay 0.05
+python test_data_sender.py --type encoder --file "../json_data/encoder_data_20250328_101150.json" --robot robot1 --delay 0.05

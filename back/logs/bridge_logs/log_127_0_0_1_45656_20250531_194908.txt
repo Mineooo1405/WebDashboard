@@ -1,0 +1,9 @@
+Time Message
+1748695774.697 Simulated log from robot1
+1748695784.703 Simulated log from robot1
+1748695794.708 Simulated log from robot1
+1748695804.712 Simulated log from robot1
+1748695814.713 Simulated log from robot1
+1748695824.714 Simulated log from robot1
+1748695834.724 Simulated log from robot1
+1748695844.730 Simulated log from robot1
