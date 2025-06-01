@@ -1,0 +1,10 @@
+Time Message
+1748767756.794 W (2307) Motor: Setup Motor Done
+1748767767.724 W (13227) Socket: Received: MOTOR:1 Kp:1 Ki:0.1 Kd:0.01
+1748767767.764 W (13237) PID: Updated Motor 1 PID values to Kp: 1.000000 Ki: 0.100000 Kd: 0.010000
+1748767773.676 W (19187) Socket: Received: MOTOR:1 Kp:1 Ki:0.1 Kd:0.01
+1748767773.717 W (19187) PID: Updated Motor 1 PID values to Kp: 1.000000 Ki: 0.100000 Kd: 0.010000
+1748767774.506 W (20027) Socket: Received: MOTOR:1 Kp:1 Ki:0.1 Kd:0.01
+1748767774.549 W (20027) PID: Updated Motor 1 PID values to Kp: 1.000000 Ki: 0.100000 Kd: 0.010000
+1748767775.024 W (20537) Socket: Received: MOTOR:1 Kp:1 Ki:0.1 Kd:0.01
+1748767775.079 W (20547) PID: Updated Motor 1 PID values to Kp: 1.000000 Ki: 0.100000 Kd: 0.010000

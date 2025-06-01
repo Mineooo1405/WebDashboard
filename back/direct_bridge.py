@@ -751,14 +751,23 @@ class DirectBridge:
         except Exception as e:
             logger.error(f"Error sending simple success ACK for ESP32 to {current_alias}: {e}")
 
-        # Send standard connection acknowledgement (also includes status: success)
+        # Send ESP32-compatible registration response (plain string, no newline)
+        try:
+            registration_response = "registration_response"
+            writer.write(registration_response.encode('utf-8'))
+            await writer.drain()
+            logger.info(f"Sent ESP32-compatible registration response to {current_alias} ({robot_ip_address})")
+        except Exception as e:
+            logger.error(f"Error sending ESP32-compatible registration response to {current_alias}: {e}")
+
+        # Send standard connection acknowledgement for other clients (JSON format with newline)
         try:
             ack_message = {"type": "connection_ack", "robot_alias": current_alias, "message": "Connected to DirectBridge", "status": "success"}
             writer.write((json.dumps(ack_message) + '\n').encode('utf-8'))
             await writer.drain()
-            logger.info(f"Sent connection acknowledgement to {current_alias} ({robot_ip_address})")
+            logger.info(f"Sent JSON connection acknowledgement to {current_alias} ({robot_ip_address})")
         except Exception as e:
-            logger.error(f"Error sending connection acknowledgement to {current_alias}: {e}")
+            logger.error(f"Error sending JSON connection acknowledgement to {current_alias}: {e}")
 
         # Send cached PID config if available
         if self.pid_config_cache:
@@ -1166,6 +1175,34 @@ class DirectBridge:
                                         # No await asyncio.sleep here, assume single command is fine
                                     else:
                                         raise ValueError("Missing motor, Kp, Ki, or Kd in pid_values payload")
+                                
+                                elif robot_command_payload.get("type") == "motion":
+                                    # Convert JSON motion command to ESP32 expected format
+                                    x = robot_command_payload.get("x", 0.0)
+                                    y = robot_command_payload.get("y", 0.0) 
+                                    theta = robot_command_payload.get("theta", 0.0)
+                                    command_sent_to_robot_str = f"dot_x:{x} dot_y:{y} dot_theta:{theta}"
+                                    writer_to_use.write(command_sent_to_robot_str.encode('utf-8'))
+                                
+                                elif robot_command_payload.get("type") == "position":
+                                    # Convert JSON position command to ESP32 expected format
+                                    x = robot_command_payload.get("x", 0.0)
+                                    y = robot_command_payload.get("y", 0.0)
+                                    command_sent_to_robot_str = f"x:{x} y:{y}"
+                                    writer_to_use.write(command_sent_to_robot_str.encode('utf-8'))
+                                
+                                elif robot_command_payload.get("type") == "motor_speed":
+                                    # Convert JSON motor speed command to ESP32 expected format
+                                    motor = robot_command_payload.get("motor", 1)
+                                    speed = robot_command_payload.get("speed", 0)
+                                    command_sent_to_robot_str = f"MOTOR_{motor}_SPEED:{speed};"
+                                    writer_to_use.write(command_sent_to_robot_str.encode('utf-8'))
+                                
+                                elif robot_command_payload.get("type") == "emergency_stop":
+                                    # Send stop command for all motors
+                                    command_sent_to_robot_str = "dot_x:0 dot_y:0 dot_theta:0"
+                                    writer_to_use.write(command_sent_to_robot_str.encode('utf-8'))
+                                
                                 else:
                                     # For other types, send as JSON string with newline
                                     command_sent_to_robot_str = json.dumps(robot_command_payload)

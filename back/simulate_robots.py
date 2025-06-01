@@ -274,9 +274,9 @@ def robot_client(robot_id, firmware_mode=False):
             last_imu_send = time.time()
             last_log_send = time.time()
             # Target frequencies
-            encoder_interval = 2 # 50Hz (every 20ms)
-            imu_interval = 1     # 20Hz (every 50ms)
-            log_interval = 10
+            encoder_interval = 20 # 50Hz (every 20ms)
+            imu_interval = 20     # 20Hz (every 50ms)
+            log_interval = 20
             
             while not data_stop_event.is_set():
                 current_time = time.time()

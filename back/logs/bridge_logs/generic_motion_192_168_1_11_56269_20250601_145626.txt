@@ -1,0 +1,14 @@
+1748765426.086 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765426.0863457, "type": "generic_motion", "data": {"type": "motion", "x": -0.3, "y": 0, "theta": 0}}
+1748765426.087 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765426.0868266, "type": "generic_motion", "data": {"type": "motion", "x": -0.3, "y": 0, "theta": 0}}
+1748765427.893 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765427.8934155, "type": "generic_motion", "data": {"type": "motion", "x": 0.3, "y": 0, "theta": 0}}
+1748765427.894 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765427.8935766, "type": "generic_motion", "data": {"type": "motion", "x": 0.3, "y": 0, "theta": 0}}
+1748765432.329 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765432.3294508, "type": "generic_motion", "data": {"type": "motion", "x": 0, "y": -0.3, "theta": 0}}
+1748765432.330 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765432.329628, "type": "generic_motion", "data": {"type": "motion", "x": 0, "y": -0.3, "theta": 0}}
+1748765434.431 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765434.4311976, "type": "generic_motion", "data": {"type": "motion", "x": -0.3, "y": 0, "theta": 0}}
+1748765434.431 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765434.4313846, "type": "generic_motion", "data": {"type": "motion", "x": -0.3, "y": 0, "theta": 0}}
+1748765434.658 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765434.6579087, "type": "generic_motion", "data": {"type": "motion", "x": 0.3, "y": -0.3, "theta": -1}}
+1748765434.658 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765434.6582625, "type": "generic_motion", "data": {"type": "motion", "x": 0.3, "y": -0.3, "theta": -1}}
+1748765437.717 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765437.717343, "type": "generic_motion", "data": {"type": "motion", "x": 0, "y": -0.3, "theta": 0}}
+1748765437.718 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765437.7175226, "type": "generic_motion", "data": {"type": "motion", "x": 0, "y": -0.3, "theta": 0}}
+1748765437.820 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765437.8199518, "type": "generic_motion", "data": {"type": "motion", "x": 0, "y": 0, "theta": 0}}
+1748765437.820 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765437.820097, "type": "generic_motion", "data": {"type": "motion", "x": 0, "y": 0, "theta": 0}}

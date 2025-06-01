@@ -1,0 +1,10 @@
+1748765849.735 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765849.7353852, "type": "generic_motion", "data": {"type": "motion", "x": 0.3, "y": -0.3, "theta": 0}}
+1748765849.736 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765849.735704, "type": "generic_motion", "data": {"type": "motion", "x": 0.3, "y": -0.3, "theta": 0}}
+1748765850.222 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765850.221764, "type": "generic_motion", "data": {"type": "motion", "x": -0.3, "y": 0.3, "theta": 0}}
+1748765850.222 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765850.2220528, "type": "generic_motion", "data": {"type": "motion", "x": -0.3, "y": 0.3, "theta": 0}}
+1748765852.501 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765852.5010843, "type": "generic_motion", "data": {"type": "motion", "x": 0.3, "y": 0, "theta": 0}}
+1748765852.502 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765852.5018861, "type": "generic_motion", "data": {"type": "motion", "x": 0.3, "y": 0, "theta": 0}}
+1748765853.035 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765853.0351222, "type": "generic_motion", "data": {"type": "motion", "x": 0.3, "y": 0, "theta": 0}}
+1748765853.035 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765853.035303, "type": "generic_motion", "data": {"type": "motion", "x": 0.3, "y": 0, "theta": 0}}
+1748765853.293 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765853.292797, "type": "generic_motion", "data": {"type": "motion", "x": 0.3, "y": 0, "theta": 0}}
+1748765853.293 {"robot_ip": "192.168.1.11", "robot_alias": "robot1", "timestamp": 1748765853.2930188, "type": "generic_motion", "data": {"type": "motion", "x": 0.3, "y": 0, "theta": 0}}
